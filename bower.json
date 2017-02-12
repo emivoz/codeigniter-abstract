@@ -19,5 +19,16 @@
     "bootstrap-sass": "^3.3.7",
     "jquery": "^3.1.1",
     "moment": "^2.17.1"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+		"assets/javascripts/bootstrap.js",
+        "assets/stylesheets/test.css"
+
+		]
+    }
   }
+  
+  
 }

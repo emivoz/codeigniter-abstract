@@ -7,14 +7,14 @@ module.exports = function(grunt) {
 					style: 'expanded'
 				},
                 files: {
-                    'dist/css/stylesheet.css':'bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss'
+                    'assets/css/stylesheet.css':'assets/css/bootstrap-sass/assets/stylesheets/_bootstrap.scss'
                 }
             }
         },
         // configure the "grunt watch" task
         watch: {          
 			sass: {
-                files: ['bower_components/bootstrap-sass/assets/stylesheets/*.scss'],
+                files: ['assets/css/bootstrap-sass/assets/stylesheets/*.scss'],
                 tasks: ['sass:dist']
             }
         },
@@ -25,8 +25,9 @@ module.exports = function(grunt) {
                 // Point to the files that should be updated when
                 // you run `grunt wiredep`
                 src: [
-                    'application/views/templates/header.html',   // .html support...
+                    'application/views/templates/header.php',   // .html support...
                 ],
+                ignorePath: '../../../',
 
                 options: {
                     // See wiredep's configuration documentation for the options
